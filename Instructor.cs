@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 class Instructor : User
 {
@@ -113,7 +114,10 @@ class Instructor : User
         studentToUpdate.Prefinal = updatedPrefinal;
         studentToUpdate.Final = updatedFinal;
 
-        Console.WriteLine($"Marks updated for Student ID {studentToUpdate.StudentId}. Total Marks: {studentToUpdate.CalculateTotalMarks()}");
+            default:
+                Console.WriteLine("Invalid choice. Marks not updated.");
+                break;
+        }
     }
 
     private static void AddMarksForStudent(Admin admin)
